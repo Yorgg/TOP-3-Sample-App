@@ -10,8 +10,7 @@ class User < ActiveRecord::Base
                     uniqueness: { case_sensitive: false }
 
   has_secure_password
-    validates :password, length: { minimum: 6 }
-
+      validates :password, length: { minimum: 6 } 
   # Returns the hash digest of the given string.
  def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :

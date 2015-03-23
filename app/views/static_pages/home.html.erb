@@ -1,14 +1,25 @@
 <% provide(:title, "Home") %>
 <div class="center jumbotron">
-  <h1>Learn something new</h1>
+  <h1>Learn Ruby on Rails</h1>
 
   <h2>
-    We are organizing the very best learning resources. 
+    Find and share the very best learning resources.
   </h2>
 
     <%= link_to "Sign up!", signup_path, class: "btn btn-lg btn-primary" %>
 
 </div>
 
-<%= link_to image_tag("rails.png", alt: "Rails logo"),
-            'http://rubyonrails.org/' %>
+ <h3>New Users</h3>
+
+<ul class="users">
+  <% @users.each do |user| %>
+  <% if user.name.include?("Jon")  || user.name.include?("Miguel")   %>
+    <li>
+      <%= gravatar_for user  %>
+      <%= link_to user.name, user %>
+    </li>
+
+    <% end %>
+  <% end %>
+</ul>

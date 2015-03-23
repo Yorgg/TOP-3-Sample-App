@@ -12,7 +12,17 @@ $gray-medium-light: #eaeaea;
 }
 
 
+/* Users index */
 
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
 
 
 
@@ -24,6 +34,11 @@ $gray-medium-light: #eaeaea;
   width: 100%;
   margin-top: 45px;
   @include box_sizing;
+}
+
+.navbar-inverse {
+    background-color: #263238;
+    border-color: #090909;
 }
 
 
@@ -91,7 +106,7 @@ p {
   color: white;
   letter-spacing: -1px;
   padding-top: 9px;
-  font-weight: bold;
+  font-weight: 500;
   &:hover {
     color: white;
     text-decoration: none;
